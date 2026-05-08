@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section id="auth-view" class="panel">
+            <p class="eyebrow">Personal Todo</p>
+            <h1>Sign in to your list</h1>
+            <div class="tabs">
+                <button id="login-tab" class="tab active">Login</button>
+                <button id="register-tab" class="tab">Sign up</button>
+            </div>
+            <div id="login-form" class="form active">
+                <form id="login-form-element">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" autocomplete="username" required>
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" autocomplete="current-password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <div id="login-message" class="message"></div>
+            </div>
+            <div id="register-form" class="form">
+                <form id="register-form-element">
+                    <label for="reg-username">Username</label>
+                    <input type="text" id="reg-username" autocomplete="username" required>
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" autocomplete="new-password" required>
+                    <label for="reg-confirm-password">Confirm password</label>
+                    <input type="password" id="reg-confirm-password" autocomplete="new-password" required>
+                    <button type="submit">Create account</button>
+                </form>
+                <div id="register-message" class="message"></div>
+            </div>
+        </section>
+
+        <section id="todo-view" class="panel hidden">
+            <div class="todo-header">
+                <div>
+                    <p class="eyebrow">Todo App</p>
+                    <h1>Your tasks</h1>
+                    <p id="signed-in-user" class="muted"></p>
+                </div>
+                <button id="logout-btn" class="secondary-btn">Logout</button>
+            </div>
+            <form id="todo-form" class="todo-form">
+                <input type="text" id="todo-input" placeholder="Add a new task" required>
+                <button type="submit">Add</button>
+            </form>
+            <ul id="todo-list" class="todo-list"></ul>
+            <p id="empty-state" class="empty-state">No tasks yet.</p>
+            <div id="todo-message" class="message"></div>
+        </section>
+    </main>
+    <script src="script.js?v=6"></script>
+</body>
+</html>
